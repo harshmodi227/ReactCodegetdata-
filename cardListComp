@@ -1,0 +1,23 @@
+import React, { useState } from 'react'
+
+import Card from '../card/card.component'
+
+import data from '../../data';
+
+import './card-list.style.css'
+
+function CardList({ option }) {
+    return (
+        <div className='card-list'>
+            {
+                data[option] ?
+                    data[option].map((item) => {
+                        return <Card key={item.key} item={item} />
+                    })
+                    : null
+            }
+        </div>
+        
+    )
+}
+export default CardList
