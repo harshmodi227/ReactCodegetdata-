@@ -1,0 +1,16 @@
+import React from 'react'
+
+import './header.style.css'
+
+function Header({ setOption }) {
+  return (
+    <div className="header">
+        <span className='option' onClick={() => setOption('recommended')}>Recommended</span>
+        <span className='option' onClick={() => setOption('trending')}>Trending</span>
+        <span className='option' onClick={() => setOption('domestic')}>Domestic</span>
+        <span className='option' onClick={() => setOption('international')}>International</span>
+    </div>
+  )
+}
+
+export default Header
